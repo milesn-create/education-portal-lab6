@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: education-portal-lab6
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app.app:app
