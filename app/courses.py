@@ -2,8 +2,8 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user
 from sqlalchemy.exc import IntegrityError
 
-from models import db, Course, Category, User, Review
-from tools import CoursesFilter, ImageSaver
+from app.models import db, Course, Category, User, Review  
+from app.tools import CoursesFilter, ImageSaver  
 
 bp = Blueprint('courses', __name__, url_prefix='/courses')
 
